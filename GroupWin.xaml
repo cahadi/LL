@@ -1,0 +1,40 @@
+﻿<Window x:Class="League.GroupWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:League"
+        mc:Ignorable="d"
+        Title="GroupWin" Height="300" Width="600">
+    <Window.Resources>
+        <ContextMenu x:Key="listMenu">
+            <MenuItem Header="Добавить" Click="AddGroup"/>
+            <MenuItem Header="Удалить" Click="DeleteGroup"/>
+        </ContextMenu>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding Groups}" 
+                 SelectedItem="{Binding SelectedGroup}"
+                 DisplayMemberPath="Title"
+                 ContextMenu="{StaticResource listMenu}"/>
+        <StackPanel Grid.Column="1" >
+            <StackPanel DataContext="{Binding SelectedGroup}">
+                <Label Content="Наименование"/>
+                <TextBox Text="{Binding Title}" />
+            </StackPanel>
+            <Label Content="Роль"/>
+            <ComboBox ItemsSource="{Binding Roles}"
+                      SelectedItem="{Binding SelectedGroup.Role}"
+                      DisplayMemberPath="Title"/>
+            <Label Content="Образ"/>
+            <ComboBox ItemsSource="{Binding Images}"
+                      SelectedItem="{Binding SelectedGroup.Image}"
+                      DisplayMemberPath="Name"/>
+        </StackPanel>
+    </Grid>
+</Window>
+

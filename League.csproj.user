@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="BondsWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GroupWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ImageWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ParentsWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RoleWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="BondsWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GroupWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ImageWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ParentsWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RoleWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
